@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
-import SmoothScroll from "../components/SmoothScroll";
+import { ClientLayout } from "../components/SmoothScrollingtLayout";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,76 +15,78 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="bg-gray">
-        <div className="w-full flex items-center justify-between pt-0.5 pb-0.5 bg-gray-400  bg-gray ">
-          <nav className="flex mx-10 animate-fadeIn">
-            <ul className="flex items-center">
-              <li>
-                <Link href="/">
-                  <img
-                    src="/logo.png"
-                    alt="Logo"
-                    className="w-13 h-14 max-w-screen-md:w-12 max-w-screen-sm:w-11"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="nav-bar ">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions" className="nav-bar">
-                  Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/education-program" className="nav-bar">
-                  Education Program
-                </Link>
-              </li>
-              <li>
-                <Link href="/new-business" className="nav-bar">
-                  New Business
-                </Link>
-              </li>
-              <li>
-                <Link href="/people" className="nav-bar">
-                  People
-                </Link>
-              </li>
-              <li>
-                <Link href="/sustainability" className="nav-bar">
-                  Sustainability
-                </Link>
-              </li>
-              <li>
-                <Link href="/recruit" className="nav-bar">
-                  Recruit
-                </Link>
-              </li>
-            </ul>
-          </nav>
-          <nav className="flex absolute right-7 right-4px animate-fadeIn">
-            <ul className="flex ">
-              <li>
-                <Link href="/about-us" className="nav-bar">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="nav-bar">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        {children}
-        <footer className="text-center text-sm text-gray-500 font-bold ">
-          Copyright © 2024 株式会社マチス教育システム matisseMatisse Education
-          System Co., Ltd All Rights Reserved.
-        </footer>
+      <body className="bg-zinc-200">
+        <ClientLayout>
+          <div className="w-full flex items-center justify-between pt-0.5 pb-0.5 bg-gray-400  bg-gray ">
+            <nav className="flex mx-10 animate-fadeIn">
+              <ul className="flex items-center">
+                <li>
+                  <Link href="/">
+                    <img
+                      src="/logo.png"
+                      alt="Logo"
+                      className="w-13 h-14 max-w-screen-md:w-12 max-w-screen-sm:w-11"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services" className="nav-bar ">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/solutions" className="nav-bar">
+                    Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/education-program" className="nav-bar">
+                    Education Program
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/new-business" className="nav-bar">
+                    New Business
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/people" className="nav-bar">
+                    People
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/sustainability" className="nav-bar">
+                    Sustainability
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/recruit" className="nav-bar">
+                    Recruit
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+            <nav className="flex absolute right-7 right-4px animate-fadeIn">
+              <ul className="flex ">
+                <li>
+                  <Link href="/about-us" className="nav-bar">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="nav-bar">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          {children}
+          <footer className="text-center text-sm text-gray-500 font-bold ">
+            Copyright © 2024 株式会社マチス教育システム matisseMatisse Education
+            System Co., Ltd All Rights Reserved.
+          </footer>
+        </ClientLayout>
       </body>
     </html>
   );

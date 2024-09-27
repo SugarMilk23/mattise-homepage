@@ -3,11 +3,11 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "../styles/style.css";
+import "../styles/recruit.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Demo() {
+function Recruit() {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const textContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -37,14 +37,13 @@ function Demo() {
     textElements?.forEach((text: any) => {
       gsap.to(text, {
         opacity: 1,
-        ease: "none",
+        ease: "power2.out",
         scrollTrigger: {
           trigger: text,
           start: "top 90%",
           end: "top 10%",
-          scrub: true,
-          duration: 0.8,
-          toggleActions: "play none none reverse",
+          scrub: 1,
+          // toggleActions: "play none none reverse",
         },
       });
     });
@@ -57,30 +56,6 @@ function Demo() {
 
   return (
     <div>
-      <section className="grid min-h-screen place-items-center py-16">
-        <p className="mb-8 max-w-[15ch] text-balance text-center text-[5vw] font-bold leading-[1]">
-          Scroll-driven path animations
-          <span className="my-6 block font-mono text-[3vw]">
-            🍏{" "}
-            <a
-              href="https://www.apple.com/ipad-10.9/"
-              target="_blank"
-              className="underline"
-            >
-              Apple Style
-            </a>{" "}
-            🔗
-          </span>
-          <a
-            className="block text-lg font-normal underline"
-            href="https://www.frontend.fyi"
-            target="_blank"
-          >
-            By frontend.fyi
-          </a>
-        </p>
-        <p>Time to do the scrolly-scrolly 👇</p>
-      </section>
       <section className="ipad-section">
         <div className="svg-container">
           <svg
@@ -97,13 +72,18 @@ function Demo() {
             />
           </svg>
         </div>
-        <div className="video-container">
-          <img src="/matissepr_dog.jpg" alt="Finance" />
+        <div className="image-container">
+          <img src="/recruit.png" alt="Finance" />
         </div>
         <div ref={textContainerRef} className="text-container">
-          <p className="fade-text">All screen. All colorful.</p>
-          <p className="fade-text">Jot it down. Type it up.</p>
-          <p className="fade-text">Take it with you.</p>
+          <p className="text-2xl font-ptSerif font-semibold">
+            もっと上を目指したい！新しい技術、知識を付けたい！
+            そんな方ならマチスにぴったりです。
+          </p>
+          <p className="fade-text text-4xl font-bold font-ptSerif ">RECRUIT</p>
+          <p className="fade-text text-2xl font-serif">
+            マチス教育システムでは、一緒に働く仲間を募集しています。
+          </p>
         </div>
       </section>
       <section className="h-screen bg-gray-100"></section>
@@ -111,4 +91,4 @@ function Demo() {
   );
 }
 
-export default Demo;
+export default Recruit;

@@ -13,8 +13,13 @@ const config: Config = {
       height: {
         imageHeight: "800px",
       },
+      fontFamily: {
+        gowunBatang: ["Gowun Batang", "serif"],
+        ptSerif: ["PT Serif", "serif"],
+      },
       colors: {
         gray: "#363636",
+        gold: "#D4AF37",
       },
       keyframes: {
         fadeIn: {

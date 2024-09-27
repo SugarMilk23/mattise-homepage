@@ -1,15 +1,15 @@
 import Video from "@/components/Video";
-import Dog from "@/components/Dog";
+import MatissePr from "@/components/MatissePr";
 import Solutions from "@/components/Solutions";
-import Demo from "@/components/Demo";
+import Recruit from "@/components/Recruit";
 
 export default function Home() {
   return (
     <>
       <Video />
-      <Dog />
+      <MatissePr />
       <Solutions />
-      <Demo />
+      <Recruit />
     </>
   );
 }
