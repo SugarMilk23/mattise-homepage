@@ -13,10 +13,8 @@ import "../styles/solutions.css";
 
 function Solutions() {
   return (
-    <div className="min-h-[200vh] flex flex-col items-center justify-center">
-      <div className="h-screen flex items-center justify-center">
-        <h1 className="text-4xl font-bold">スクロールして本を開けます</h1>
-      </div>
+    <div className="h-screen flex items-center justify-center ">
+      <h1 className="text-4xl font-bold">スクロールして本を開けます</h1>
       <FoldableMap />
     </div>
   );
@@ -24,7 +22,7 @@ function Solutions() {
 
 const FoldableMap = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.5 });
+  const isInView = useInView(ref, { once: false, amount: 0.7 });
   const [isFolded, setIsFolded] = useState(true);
 
   // Create a motion value based on inView state
@@ -63,12 +61,12 @@ const FoldableMap = () => {
             variants={{ open: { rotate: 0 }, hovering: { rotate: 0 } }}
             whileHover="hovering"
             initial={{ rotate: 3 }}
-            className="grid aspect-video max-h-[80vh] w-full min-w-[600px] p-8"
+            className="grid aspect-video max-h-[80vh]  w-[320px] md:w-[660px] lg:w-[1000px] xl:w-[1200px] p-8"
           >
             <div className="grid grid-cols-3 [grid-area:1/1]">
               <motion.div
                 style={{ x: xLeftSection, skewY: "-1deg" }}
-                className="map-image origin-bottom-right border-r border-[rgba(255,255,255,.1)] shadow-2xl"
+                className="map-image origin-bottom-right border-r border-[rgba(255,255,255,.1)] shadow-2xl "
               />
               <motion.div
                 style={
@@ -101,7 +99,7 @@ const FoldableMap = () => {
             className="flex w-full justify-center text-xl font-semibold md:text-4xl"
           >
             <p className="rounded-2xl bg-white px-12 py-5 text-[hsl(73_69%_26%)]">
-              Map unfolded as you scrolled! ☝️
+              マチスのソリューションをご紹介! ☝️
             </p>
           </motion.div>
         </motion.div>

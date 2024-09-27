@@ -71,16 +71,16 @@ export default function MatissePr() {
 
     // Text animations
     const textElements = textContainer.querySelectorAll("p");
-    gsap.set(textElements, { x: 0, opacity: 0 });
-    gsap.set(slogan, { opacity: 0 });
+    gsap.set(textElements, { x: -100, opacity: 0 });
+    gsap.set(slogan, { opacity: 0, x: -100 });
 
     gsap.to(slogan, {
-      x: 80,
+      x: 0,
       opacity: 1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: slogan,
-        start: "top bottom",
+        start: "top bottom-=80px",
         end: "top 50%",
         scrub: 1,
       },
@@ -89,7 +89,7 @@ export default function MatissePr() {
     textElements.forEach((text: Element) => {
       gsap.to(text, {
         opacity: 1,
-        x: 100,
+        x: 0,
         ease: "power2.out",
         scrollTrigger: {
           trigger: text,
@@ -130,11 +130,11 @@ export default function MatissePr() {
         ref={rightImageRef}
         src="/matissepr_panda.png"
         alt="panda"
-        className="w-[ 33.333334%] h-screen sticky top-0 z-10"
+        className="w-[33.333334%] h-screen sticky top-0 z-10"
       />
       <div
         ref={textContainerRef}
-        className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 text-container w-[600px]  "
+        className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 text-container w-full  "
       >
         <img
           src="matissepr_slogan.png"
@@ -142,7 +142,7 @@ export default function MatissePr() {
           ref={sloganRef}
           className="pb-5"
         />
-        <p className="text-white text-xl text-left fade-text ">
+        <p className="text-white text-small text-left fade-text lg:text-xl md:text-lg ">
           おや、動物たちまでいきいきとITを使いこなしていますね！
           <br />
           そう、株式会社マチス教育システムはどんな「当たり前じゃないトコロ」にも

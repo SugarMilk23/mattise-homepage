@@ -72,15 +72,15 @@ function Recruit() {
             />
           </svg>
         </div>
-        <div className="image-container">
-          <img src="/recruit.png" alt="Finance" />
+        <div className="image-container ">
+          <img src="/recruit.png" alt="Finance" className="w-full" />
         </div>
         <div ref={textContainerRef} className="text-container">
           <p className="text-2xl font-ptSerif font-semibold">
             もっと上を目指したい！新しい技術、知識を付けたい！
             そんな方ならマチスにぴったりです。
           </p>
-          <p className="fade-text text-4xl font-bold font-ptSerif ">RECRUIT</p>
+          <p className="fade-text text-5xl font-bold font-ptSerif ">RECRUIT</p>
           <p className="fade-text text-2xl font-serif">
             マチス教育システムでは、一緒に働く仲間を募集しています。
           </p>

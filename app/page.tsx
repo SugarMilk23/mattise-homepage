@@ -1,4 +1,4 @@
-import Video from "@/components/Video";
+import IntroVideo from "@/components/IntroVideo";
 import MatissePr from "@/components/MatissePr";
 import Solutions from "@/components/Solutions";
 import Recruit from "@/components/Recruit";
@@ -6,7 +6,7 @@ import Recruit from "@/components/Recruit";
 export default function Home() {
   return (
     <>
-      <Video />
+      <IntroVideo />
       <MatissePr />
       <Solutions />
       <Recruit />
