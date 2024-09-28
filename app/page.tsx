@@ -1,6 +1,6 @@
 import IntroVideo from "@/components/IntroVideo";
 import MatissePr from "@/components/MatissePr";
-import Solutions from "@/components/Solutions";
+import Services from "@/components/Services";
 import Recruit from "@/components/Recruit";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <IntroVideo />
       <MatissePr />
-      <Solutions />
+      <Services />
       <Recruit />
     </>
   );

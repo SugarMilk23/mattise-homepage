@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "@nextui-org/navbar": "^2.0.37",
     "@nextui-org/react": "^2.4.8",
     "@nextui-org/system": "^2.2.6",
@@ -16,6 +17,7 @@
     "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
     "lenis": "^1.1.13",
+    "lucide-react": "^0.446.0",
     "matisse": "file:",
     "next": "14.2.13",
     "react": "^18",

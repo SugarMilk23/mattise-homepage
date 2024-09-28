@@ -8,9 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function MatissePr() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const leftImageRef = useRef<HTMLImageElement>(null);
-  const middleImageRef = useRef<HTMLImageElement>(null);
-  const rightImageRef = useRef<HTMLImageElement>(null);
+  const leftImageRef = useRef<HTMLDivElement>(null);
+  const middleImageRef = useRef<HTMLDivElement>(null);
+  const rightImageRef = useRef<HTMLDivElement>(null);
   const textContainerRef = useRef<HTMLDivElement>(null);
   const sloganRef = useRef<HTMLImageElement>(null);
 
@@ -111,30 +111,32 @@ export default function MatissePr() {
       ref={containerRef}
       className="relative flex justify-center items-top h-[250vh] w-full"
     >
-      {/* Text container */}
-
-      {/* Image elements */}
-      <img
-        ref={leftImageRef}
-        src="/matissepr_dog.png"
-        alt="dog"
-        className="w-1/3 h-screen sticky top-0 z-10"
-      />
-      <img
-        ref={middleImageRef}
-        src="/matissepr_kingyo.jpg"
-        alt="golden fish"
-        className="w-1/3 h-screen sticky top-0 z-10"
-      />
-      <img
-        ref={rightImageRef}
-        src="/matissepr_panda.png"
-        alt="panda"
-        className="w-[33.333334%] h-screen sticky top-0 z-10"
-      />
+      <div className="flex w-full h-screen sticky top-0 z-10">
+        <div ref={leftImageRef} className="flex-1 overflow-hidden">
+          <img
+            src="/matissepr_dog.png"
+            alt="dog"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div ref={middleImageRef} className="flex-1 overflow-hidden">
+          <img
+            src="/matissepr_kingyo.jpg"
+            alt="golden fish"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div ref={rightImageRef} className="flex-1 overflow-hidden">
+          <img
+            src="/matissepr_panda.png"
+            alt="panda"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
       <div
         ref={textContainerRef}
-        className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 text-container w-full  "
+        className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 text-container w-full"
       >
         <img
           src="matissepr_slogan.png"

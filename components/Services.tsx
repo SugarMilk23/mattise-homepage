@@ -9,12 +9,11 @@ import {
   useSpring,
   useInView,
 } from "framer-motion";
-import "../styles/solutions.css";
+import "../styles/services.css";
 
-function Solutions() {
+function Services() {
   return (
-    <div className="h-screen flex items-center justify-center ">
-      <h1 className="text-4xl font-bold">スクロールして本を開けます</h1>
+    <div className="h-[200vh] flex items-center justify-center ">
       <FoldableMap />
     </div>
   );
@@ -22,7 +21,7 @@ function Solutions() {
 
 const FoldableMap = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.7 });
+  const isInView = useInView(ref, { once: false, amount: 0.4 });
   const [isFolded, setIsFolded] = useState(true);
 
   // Create a motion value based on inView state
@@ -47,7 +46,7 @@ const FoldableMap = () => {
 
   return (
     <div ref={ref} className="min-h-screen flex items-center justify-center">
-      <div className="overflow-x-clip w-full">
+      <div className="overflow-x-clip  w-full">
         <motion.div
           animate={isFolded ? "folded" : "open"}
           variants={{
@@ -55,18 +54,18 @@ const FoldableMap = () => {
             folded: { scale: 0.9 },
           }}
           initial="folded"
-          className="relative flex flex-col items-center"
+          className="relative  flex flex-col items-center"
         >
           <motion.div
             variants={{ open: { rotate: 0 }, hovering: { rotate: 0 } }}
             whileHover="hovering"
             initial={{ rotate: 3 }}
-            className="grid aspect-video max-h-[80vh]  w-[320px] md:w-[660px] lg:w-[1000px] xl:w-[1200px] p-8"
+            className="grid aspect-video  w-[600px] md:w-[960px] lg:w-[1200px] xl:w-[1500px] p-8"
           >
-            <div className="grid grid-cols-3 [grid-area:1/1]">
+            <div className="grid grid-cols-3  [grid-area:1/1]">
               <motion.div
                 style={{ x: xLeftSection, skewY: "-1deg" }}
-                className="map-image origin-bottom-right border-r border-[rgba(255,255,255,.1)] shadow-2xl "
+                className="map-image  origin-bottom-right border-r border-[rgba(255,255,255,.1)] shadow-2xl "
               />
               <motion.div
                 style={
@@ -75,11 +74,11 @@ const FoldableMap = () => {
                     "--brightness": centerBrightness,
                   } as MotionStyle
                 }
-                className="map-image brightness-[--brightness]"
+                className="map-image  brightness-[--brightness]"
               />
               <motion.div
                 style={{ x: xRightSection, skewY: "1deg" }}
-                className="map-image origin-bottom-left border-l border-[rgba(255,255,255,.1)] shadow-2xl"
+                className="map-image h[723px] origin-bottom-left border-l border-[rgba(255,255,255,.1)] shadow-xl"
               />
             </div>
           </motion.div>
@@ -99,7 +98,7 @@ const FoldableMap = () => {
             className="flex w-full justify-center text-xl font-semibold md:text-4xl"
           >
             <p className="rounded-2xl bg-white px-12 py-5 text-[hsl(73_69%_26%)]">
-              マチスのソリューションをご紹介! ☝️
+              マチスのサービスをご紹介! ☝️
             </p>
           </motion.div>
         </motion.div>
@@ -108,4 +107,4 @@ const FoldableMap = () => {
   );
 };
 
-export default Solutions;
+export default Services;
