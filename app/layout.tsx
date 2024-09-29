@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className="bg-zinc-200">
         <ClientLayout>
-          <div className="w-full flex items-center justify-between pt-0.5 pb-0.5 bg-gray-400  bg-gray ">
+          <div className="w-full flex items-center justify-between pt-0.5 pb-0.5 bg-black">
             <nav className="flex mx-10 animate-fadeIn">
               <ul className="flex items-center">
                 <li>

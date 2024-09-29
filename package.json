@@ -15,23 +15,29 @@
     "@nextui-org/system": "^2.2.6",
     "@nextui-org/theme": "^2.2.11",
     "@studio-freight/lenis": "^1.0.42",
+    "@tabler/icons-react": "^3.19.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "gsap": "^3.12.5",
     "lenis": "^1.1.13",
     "lucide-react": "^0.446.0",
     "matisse": "file:",
     "next": "14.2.13",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",
-    "framer-motion": "^11.8.0",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "framer-motion": "^11.9.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
     "typescript": "^5"
   }
 }

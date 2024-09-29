@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/recruit.css";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +16,7 @@ function Recruit() {
     const svg = svgRef.current;
     const path = svg?.querySelector("path");
     const textContainer = textContainerRef.current;
-    const textElements = textContainer?.querySelectorAll("p");
+    const textElements = textContainer?.querySelectorAll("p, button, span");
 
     // Set initial states
     gsap.set(path as any, { strokeDasharray: 9300, strokeDashoffset: 9300 });
@@ -80,7 +81,19 @@ function Recruit() {
             もっと上を目指したい！新しい技術、知識を付けたい！
             そんな方ならマチスにぴったりです。
           </p>
-          <p className="fade-text text-5xl font-bold font-ptSerif ">RECRUIT</p>
+
+          {/* <p className="fade-text text-5xl font-bold font-ptSerif ">
+            <Link href="/recruit">RECRUIT 👈</Link>
+          </p> */}
+          <button className="learn-more">
+            <span className="circle" aria-hidden="true">
+              <span className="icon arrow"></span>
+            </span>
+            <p className="button-text font-ptSerif font-semibold italic">
+              RECRUIT
+            </p>
+          </button>
+
           <p className="fade-text text-2xl font-serif">
             マチス教育システムでは、一緒に働く仲間を募集しています。
           </p>

@@ -47,6 +47,9 @@ const FoldableMap = () => {
   return (
     <div ref={ref} className="min-h-screen flex items-center justify-center">
       <div className="overflow-x-clip  w-full">
+        <p className="rounded-2xl text-3xl bg-white w-[38%] mx-auto mt-32 mb-6 px-10 py-5 text-[hsl(73_69%_26%)]">
+          マチスのサービスをご紹介! 👇
+        </p>
         <motion.div
           animate={isFolded ? "folded" : "open"}
           variants={{
@@ -96,11 +99,7 @@ const FoldableMap = () => {
               },
             }}
             className="flex w-full justify-center text-xl font-semibold md:text-4xl"
-          >
-            <p className="rounded-2xl bg-white px-12 py-5 text-[hsl(73_69%_26%)]">
-              マチスのサービスをご紹介! ☝️
-            </p>
-          </motion.div>
+          ></motion.div>
         </motion.div>
       </div>
     </div>
