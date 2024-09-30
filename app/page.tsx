@@ -3,17 +3,21 @@ import MatissePr from "@/components/MatissePr";
 import Services from "@/components/Services";
 import Recruit from "@/components/Recruit";
 import { Solutions } from "@/components/Solutions";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import Example from "@/components/HorizontalScrollCarousel";
+// import { About } from "@/components/About";
 
 export default function Home() {
   return (
     <>
       <IntroVideo />
+      {/* <About /> */}
       <MatissePr />
       <Services />
-      <BackgroundBeamsWithCollision className=" h-full mx-auto">
-        <Solutions />
-      </BackgroundBeamsWithCollision>
+      <Example />
+
+      {/* <BackgroundBeamsWithCollision className=" mx-auto"> */}
+      <Solutions />
+      {/* </BackgroundBeamsWithCollision> */}
       <Recruit />
     </>
   );

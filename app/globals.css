@@ -1,4 +1,120 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+@import "https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+html.lenis {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-bar {
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    #f6f6f6 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Noto Serif JP", serif;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-bar:before {
+  content: "";
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-bar:hover {
+  background-position: 0;
+}
+
+.nav-bar:hover::before {
+  width: 100%;
+}
+
+/* Presentational Styles */
+
+/* li {
+ 
+  color: rgb(209, 208, 208);
+  transition: all 0.2s ease-in-out;
+}
+
+li:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+} */
+
+@media (max-width: 1024px) {
+  li {
+    font-size: 14px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  li {
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 480px) {
+  li {
+    font-size: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
