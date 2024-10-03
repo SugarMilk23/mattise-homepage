@@ -13,5 +13,5 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
     }
   }, [lenis]);
 
-  return <>{children}</>;
+  return <div className=" w-full">{children}</div>;
 }

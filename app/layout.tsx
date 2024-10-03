@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
-import { ClientLayout } from "../components/SmoothScrollingtLayout";
+import { ClientLayout } from "../components/smoothScrollingtLayout";
+
+import Particles from "@/components/ui/particles";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,18 +19,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
-      <body className="bg-zinc-200">
+    <html lang="ja" className="bg-zinc-200">
+      <body>
         <ClientLayout>
           <div className="w-full flex items-center justify-between pt-0.5 pb-0.5 bg-black ">
-            <nav className="flex mx-10 animate-fadeIn z-10">
+            <nav className="flex mx-10 animate-fadeIn z-30">
               <ul className="flex items-center">
                 <li>
                   <Link href="/">
                     <img
                       src="/logo.png"
                       alt="Logo"
-                      className="w-13 h-14 max-w-screen-md:w-12 max-w-screen-sm:w-11"
+                      className=" w-13 h-14 max-w-screen-md:w-12 max-w-screen-sm:w-11"
                     />
                   </Link>
                 </li>
@@ -69,7 +71,7 @@ export default function RootLayout({
                 </li>
               </ul>
             </nav>
-            <nav className="flex absolute right-7 right-4px animate-fadeIn z-10">
+            <nav className="flex absolute right-7 right-4px animate-fadeIn z-30">
               <ul className="flex ">
                 <li>
                   <Link href="/about-us" className="nav-bar">
@@ -85,9 +87,145 @@ export default function RootLayout({
             </nav>
           </div>
           {children}
-          <footer className="text-center text-sm text-gray-500 font-bold ">
-            Copyright © 2024 株式会社マチス教育システム matisseMatisse Education
-            System Co., Ltd All Rights Reserved.
+          <footer className="footer w-full flex flex-col">
+            <div className=" w-1/2 border-t-1 border-gray-300 mx-auto mb-10" />
+            <div className="flex flex-col ">
+              <div className="hover-span">
+                <div className="hover-nav flex flex-col  ">
+                  <div className="w-full flex flex-row  ">
+                    <nav className="footer-nav">
+                      <h6 className="footer-title">Services </h6>
+
+                      <div className="link-container">
+                        <Link href="*" className="link">
+                          養殖管理システム
+                        </Link>
+                        <Link href="*" className="link ">
+                          ECサイトシステム
+                        </Link>
+                        <Link href="*" className="link ">
+                          太陽光
+                        </Link>
+                        <Link href="*" className="link ">
+                          DID
+                        </Link>
+                      </div>
+                    </nav>
+                    <nav className="footer-nav">
+                      <h6 className="footer-title">Solutions</h6>
+                      <div className="link-container">
+                        <Link href="*" className="link ">
+                          インフラストラクチャー
+                        </Link>
+                        <Link href="*" className="link ">
+                          金融
+                        </Link>
+                        <Link href="*" className="link ">
+                          流通
+                        </Link>
+                        <Link href="*" className="link ">
+                          DX
+                        </Link>
+                        <Link href="*" className="link ">
+                          Web 開発
+                        </Link>
+                        <Link href="*" className="link ">
+                          IoT/人工知能
+                        </Link>
+                        <Link href="*" className="link ">
+                          企業サポート
+                        </Link>
+                      </div>
+                    </nav>
+                    <nav className="footer-nav">
+                      <h6 className="footer-title">Education Program</h6>
+                      <div className="link-container">
+                        <Link href="*" className="link ">
+                          マチスアカデミー
+                        </Link>
+                        <Link href="*" className="link">
+                          E-ラーニング
+                        </Link>
+                        <Link href="*" className="link ">
+                          教育事業
+                        </Link>
+                      </div>
+                    </nav>
+
+                    <nav className="footer-nav">
+                      <h6 className="footer-title">Recruit</h6>
+                      <div className="link-container">
+                        <Link href="*" className="link ">
+                          勤務環境
+                        </Link>
+                        <Link href="*" className="link ">
+                          セミナー/勉強会
+                        </Link>
+                        <Link href="*" className="link ">
+                          インターン
+                        </Link>
+                        <Link href="*" className="link ">
+                          タイプ診断
+                        </Link>
+                        <Link href="*" className="link ">
+                          IT 美術館
+                        </Link>
+                      </div>
+                    </nav>
+                    <nav className="footer-nav">
+                      <h6 className="footer-title">Other</h6>
+                      <div className="link-container">
+                        <Link href="*" className="link ">
+                          New Business
+                        </Link>
+                        <Link href="*" className="link ">
+                          People
+                        </Link>
+                        <Link href="*" className="link ">
+                          Sustainability
+                        </Link>
+                      </div>
+                    </nav>
+                    <nav className="footer-nav">
+                      <h6 className="footer-title">About Us</h6>
+                      <div className="link-container">
+                        <Link href="*" className="link ">
+                          会社概要
+                        </Link>
+                        <Link href="*" className="link ">
+                          代表者挨拶
+                        </Link>
+                        <Link href="*" className="link ">
+                          沿革
+                        </Link>
+                        <Link href="*" className="link ">
+                          アクセス
+                        </Link>
+                        <Link href="*" className="link ">
+                          ベトナム支社
+                        </Link>
+                        <Link href="*" className="link">
+                          マージン率公開
+                        </Link>
+                        <Link href="*" className="link ">
+                          プライバシーポリシー
+                        </Link>
+                      </div>
+                    </nav>
+                  </div>
+
+                  <div className="get-down flex flex-col mx-auto">
+                    <nav className="flex justify-center mb-6">
+                      <img src="x.png" alt="x" className="w-[45px] h-[45px]" />
+                    </nav>
+                    <p className="mb-[-50px] pb-5 text-center text-sm text-gray-500 font-bold ">
+                      Copyright © 2024 株式会社マチス教育システム matisseMatisse
+                      Education System Co., Ltd All Rights Reserved.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </footer>
         </ClientLayout>
       </body>

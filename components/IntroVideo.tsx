@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Particles from "./ui/particles";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,7 +49,14 @@ export default function IntroVideo() {
   }, []);
 
   return (
-    <section ref={containerRef} className="h-screen">
+    <section ref={containerRef} className="h-screen bg-transparent">
+      <Particles
+        className="absolute inset-0 h-full w-full z-20"
+        quantity={100}
+        ease={80}
+        color="#FFFFFF"
+        refresh
+      />
       <div className="h-full w-full flex justify-center items-center">
         <div className="w-full flex justify-center">
           <video

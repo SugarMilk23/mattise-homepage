@@ -58,7 +58,7 @@ function Recruit() {
   return (
     <div>
       <section className="ipad-section ">
-        <div className="svg-container pt-32">
+        <div className="svg-container pt-32 ">
           <svg
             ref={svgRef}
             viewBox="0 0 1400 700"
@@ -99,7 +99,7 @@ function Recruit() {
           </p>
         </div>
       </section>
-      <section className="h-screen bg-gray-100"></section>
+      <div className="h-[200px]" />
     </div>
   );
 }

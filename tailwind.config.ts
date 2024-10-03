@@ -18,10 +18,14 @@ const config: Config = {
       height: {
         imageHeight: "800px",
       },
+      lineHeight: {
+        negative: "-1",
+      },
       backgroundImage: {
         image: "url('/background.jpg')",
       },
       fontFamily: {
+        fredoka: ["Fredoka", "sans-setif"],
         gowunBatang: ["Gowun Batang", "serif"],
         ptSerif: ["PT Serif", "serif"],
       },

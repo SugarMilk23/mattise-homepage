@@ -2,11 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+/* font */
 @import "https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+@import "https:fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap";
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .footer-nav {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .footer-title {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .link-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    text-align: center;
+    height: 270px;
+    opacity: 0;
+    background-color: rgb(200, 200, 200);
+  }
+  .link {
+    cursor: pointer;
+    padding: 15px 5px 0px 5px;
+    color: black;
+    font-size: 14px;
+    font-family: "PT Serif", serif;
+    font-weight: 500;
+  }
+
+  .get-down {
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    top: -200px;
+  }
+
+  .hover-nav:hover .link-container {
+    opacity: 1;
+  }
+
+  .footer-title:hover {
+    cursor: default;
+  }
+  .hover-nav:hover .get-down {
+    transform: translateY(210px);
+    padding-bottom: 20px;
+  }
+
+  .hover-effect {
+    @apply relative block cursor-pointer;
+  }
+
+  .hover-effect:before,
+  .hover-effect:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #fff;
+  }
+
+  .hover-effect:before {
+    left: -2.5px;
+  }
+
+  .hover-effect:after {
+    right: 2.5px;
+    background: #fff;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .hover-effect:hover:before {
+    background: #fff;
+    width: 50%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .hover-effect:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
   }
 }
 
@@ -57,7 +147,6 @@ html {
   display: inline-block;
   padding: 5px 0;
   position: relative;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
